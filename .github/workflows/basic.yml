@@ -29,3 +29,13 @@ jobs:
     steps:
       - name: Display Message
         run: echo "Hi"
+  env:
+    APP_NAME: myapp
+    AWS_REGION: ap-south-1
+
+    steps:
+      -name: Print variables
+       run: |
+
+        echo "APP: $APP_NAME"
+        echo "Region: $APP_REGION" 
