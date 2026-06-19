@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Anuj CI Pipeline
 
 on:
   push:
