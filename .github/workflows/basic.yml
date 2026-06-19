@@ -34,8 +34,8 @@ jobs:
     AWS_REGION: ap-south-1
 
     steps:
-      -name: Print variables
-       run: |
+      - name: Print variables
+        run: |
 
         echo "APP: $APP_NAME"
         echo "Region: $APP_REGION" 
