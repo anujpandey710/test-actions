@@ -37,5 +37,5 @@ jobs:
       - name: Print variables
         run: |
 
-        echo "APP: $APP_NAME"
-        echo "Region: $AWS_REGION" 
+          echo "APP: $APP_NAME"
+          echo "Region: $AWS_REGION" 
