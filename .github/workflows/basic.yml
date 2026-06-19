@@ -22,3 +22,9 @@ jobs:
 
       - name: List Files
         run: ls -l
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Message
+        run: echo "Hi"
