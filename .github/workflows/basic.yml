@@ -38,4 +38,4 @@ jobs:
         run: |
 
         echo "APP: $APP_NAME"
-        echo "Region: $APP_REGION" 
+        echo "Region: $AWS_REGION" 
