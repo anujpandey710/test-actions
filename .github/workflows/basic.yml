@@ -23,6 +23,7 @@ jobs:
       - name: List Files
         run: ls -l
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
