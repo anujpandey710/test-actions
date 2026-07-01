@@ -16,38 +16,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Display Message
-        run: echo "Hello from GitHub Actions!"
+      - run: echo "Hello"
 
-      - name: Check Current Directory
-        run: pwd
-
-      - name: List Files
-        run: ls -l
-        
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
-    environment:
-      name: production
+    environment: production
 
     steps:
-      - name: Display Message
-        run: echo "Hi"
+      - run: echo "Hi"
 
-      - name: Print variables
-        run: |
+      - run: |
           echo "APP: $APP_NAME"
-          echo "Region: $AWS_REGION" 
+          echo "Region: $AWS_REGION"
 
-      - name: use secret
-        run: echo "API_KEY ${{ secrets.ABC }}"
+      - run: echo "Secret exists"
+        env:
+          SECRET: ${{ secrets.ABC }}
 
-      - name: Use environment variable
-        run: echo "Environment Var: $REPOSITORY_VAR"
+      - run: echo "Var: $REPOSITORY_VAR"
         env:
           REPOSITORY_VAR: ${{ vars.XYZ }}
