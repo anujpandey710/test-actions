@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: somnath
+      name: production
 
     steps:
       - name: Display Message
