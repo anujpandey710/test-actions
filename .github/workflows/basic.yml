@@ -42,7 +42,7 @@ jobs:
           echo "APP: $APP_NAME"
           echo "Region: $AWS_REGION" 
 
-       -name: use secret
+      - name: use secret
         run: echo "API_KEY is $AWS_ACESSS_KEY"
         env:
           API_KEY: ${{ secret.AWS_ACESSS_KEY}}   
