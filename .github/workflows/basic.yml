@@ -48,4 +48,6 @@ jobs:
         run: echo "API_KEY ${{ secrets.ABC }}"
 
       - name: Use environment variable
-        run: echo "Environment Var: ${{ vars.XYZ }}"
+        run: echo "Environment Var: $REPOSITORY_VAR"
+        env:
+          REPOSITORY_VAR: ${{ vars.XYZ }}
