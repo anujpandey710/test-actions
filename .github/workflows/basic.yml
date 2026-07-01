@@ -32,6 +32,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
+    environment:
+      name: somnath
+
     steps:
       - name: Display Message
         run: echo "Hi"
@@ -42,4 +45,4 @@ jobs:
           echo "Region: $AWS_REGION" 
 
       - name: use secret
-        run: echo "API_KEY ${{ secrets.AWS_ACESSS_KEY}}"
+        run: echo "API_KEY ${{ secrets.AWS_ACESSS_KEY }}"
