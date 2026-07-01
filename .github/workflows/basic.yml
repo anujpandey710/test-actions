@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          
 
       - name: Display Message
         run: echo "Hello from GitHub Actions!"
@@ -39,3 +41,8 @@ jobs:
         run: |
           echo "APP: $APP_NAME"
           echo "Region: $AWS_REGION" 
+
+       -name: use secret
+        run: echo "API_KEY is $AWS_ACESSS_KEY"
+        env:
+          API_KEY: {{ secret.AWS_ACESSS_KEY}}   
