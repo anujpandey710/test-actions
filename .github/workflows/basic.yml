@@ -47,5 +47,5 @@ jobs:
       - name: use secret
         run: echo "API_KEY ${{ secrets.ABC }}"
 
-      - name: use environment variables
-        run: echo "environment Var: ${{ env.XYZ }}"
+      - name: Use environment variable
+        run: echo "Environment Var: ${{ vars.XYZ }}"
