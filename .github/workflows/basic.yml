@@ -32,10 +32,12 @@ jobs:
           echo "APP: $APP_NAME"
           echo "Region: $AWS_REGION"
 
-      - run: echo "Secret exists"
+      - run: |
+          echo "Secret exists"
         env:
           SECRET: ${{ secrets.ABC }}
 
-      - run: echo "Var: $REPOSITORY_VAR"
+      - run: |
+          echo "Var: $REPOSITORY_VAR"
         env:
           REPOSITORY_VAR: ${{ vars.XYZ }}
