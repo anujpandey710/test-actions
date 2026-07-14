@@ -23,7 +23,7 @@ jobs:
   deploy:
     needs: build
   #  if: github.ref == 'refs/heads/dev'
-    if: success()
+    if: failure()
     runs-on: ubuntu-latest
   #  environment: production
 
